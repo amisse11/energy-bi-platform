@@ -91,6 +91,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -99,7 +100,7 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "act_trigger_silver",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
