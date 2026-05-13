@@ -1,7 +1,0 @@
-{
-	"name": "ls_databricks_energy",
-	"properties": {
-		"annotations": [],
-		"type": "Databricks"
-	}
-}
