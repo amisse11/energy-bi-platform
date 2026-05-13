@@ -1,0 +1,15 @@
+{
+	"name": "energy-bi-adf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2931c682-1432-465e-a520-55a444cdacbd",
+		"tenantId": "12865647-a544-42ef-8c89-f771c2fad0d3"
+	}
+}
