@@ -129,26 +129,71 @@ Ces notebooks représentent la phase d'exploration et de conception qui a préc�
 
 ```
 energy-bi-platform/
-├── README.md
-├── notebooks/
-│   ├── databricks/
-│   │   ├── 01_bronze_ingestion.ipynb
-│   │   ├── 02_silver_transform.ipynb
-│   │   ├── 03_gold_aggregation.ipynb
-│   │   └── 04_gold_star_schema.ipynb
-│   └── local/
-│       ├── 01_exploration_uci_power.ipynb
-│       ├── 02_preparation.ipynb
-│       ├── 03_schema_entrepot.ipynb
-│       └── 04_chargement_azure_sql.ipynb
-└── screenshots/
-    ├── 01_powerbi_overview.png
-    ├── 02_powerbi_zones.png
-    ├── 03_powerbi_time_intelligence.png
-    ├── 04_powerbi_model_view.png
-    ├── 05_adf_pipeline.png
-    ├── 06_adf_debug_success.png
-    └── 07_azure_sql_rowcount.png
+│   .env
+│   .env.example
+│   .gitignore
+│   publish_config.json
+│   README.md
+│   
+├───data
+│   ├───interim
+│   ├───processed
+│   │       daily_power_consumption.csv
+│   │       daily_power_consumption.parquet
+│   │       hourly_power_consumption.csv
+│   │       hourly_power_consumption.parquet
+│   │       
+│   ├───raw
+│   │       household_power_consumption.txt
+│   │       
+│   └───schema
+│           DimDate.csv
+│           DimMeter.csv
+│           FactConsumption.csv
+│           
+├───dataset
+│       ds_blob_bronze.json
+│       ds_csv_raw.json
+│       
+├───docs
+│   │   bi-energie.pbix
+│   │   
+│   └───screenshots
+│           01_powerbi_overview.png
+│           02_powerbi_zones.png
+│           03_powerbi_time_intelligence.png
+│           04_powerbi_model_view.png
+│           05_adf_pipeline.png
+│           06_adf_debug_success.png
+│           07_azure_sql_rowcount.png
+│           
+├───factory
+│       energy-bi-adf.json
+│       
+├───linkedService
+│       AzureSqlDatabase1.json
+│       ls_azure_sql.json
+│       ls_blob_raw.json
+│       ls_databricks_energy.json
+│       
+├───notebooks
+│   ├───databricks
+│   │       01_bronze_ingestion.ipynb
+│   │       02_silver_transform.ipynb
+│   │       03_gold_aggregation.ipynb
+│   │       04_gold_star_schema.ipynb
+│   │       
+│   └───local
+│           01_exploration_uci_power.ipynb
+│           02_preparation_uci_power.ipynb
+│           03_schema_entrepot.ipynb
+│           04_chargement_azure_sql.ipynb
+│           
+├───pipeline
+│       pl_ingest_energy_csv.json
+│       
+└───src
+        __init__.py
 ```
 
 ***
