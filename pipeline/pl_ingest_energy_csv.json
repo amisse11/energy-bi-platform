@@ -146,7 +146,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/04_gold_star_schema"
+					"notebookPath": "/Users/amisse11@ilearndata101.onmicrosoft.com/04_gold_star_schema"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_databricks_energy",
