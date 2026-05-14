@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "copy_data",
+				"name": "act_copy_bronze",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -104,7 +104,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "copy_data",
+						"activity": "act_copy_bronze",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -120,6 +120,33 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/02_silver_transform"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_databricks_energy",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "act_trigger_star_schema",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "act_trigger_silver",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/04_gold_star_schema"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_databricks_energy",
