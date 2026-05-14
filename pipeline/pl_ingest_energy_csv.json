@@ -119,7 +119,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/02_silver_transform"
+					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/energy-bi-platform/notebooks/databricks/02_silver_transform"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_databricks_energy",
@@ -146,7 +146,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/amisse11@ilearndata101.onmicrosoft.com/04_gold_star_schema"
+					"notebookPath": "/Workspace/Users/amisse11@ilearndata101.onmicrosoft.com/energy-bi-platform/notebooks/databricks/04_gold_star_schema"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_databricks_energy",
